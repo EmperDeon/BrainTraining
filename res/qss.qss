@@ -1,0 +1,13 @@
+/** {*/
+ /*background-color: rgb(233, 233, 240);*/
+/*}*/
+
+QLabel#math_time {
+    color: black;
+    font: normal normal 12pt "Fantasque Sans Mono";
+}
+
+QLabel#math_expr {
+    color: black;
+    font: bold normal 24pt "Fantasque Sans Mono";
+}
