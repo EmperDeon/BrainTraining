@@ -12,11 +12,11 @@ class BMathWidget : public IGameWidget {
 
 	BMathExpr *expr = nullptr;
 
-	QLabel *l_time, *l_expr;
-	QLineEdit *l_edit;
+	QLabel *l_time, *l_expr, *l_edit;
+	QPushButton *b_lead, *b_stat;
  QTimer *t_time;
 
- int time, correct, wrong, score;
+ int time, correct, wrong, score, num = 0;
 
 public:
 	BMathWidget();
@@ -27,7 +27,9 @@ public:
 
 	virtual void pause();
 	virtual void resume();
-	virtual void focus();
+
+	virtual void keyPress(int key);
+
 };
 
 #endif //BRAINTRAINING_MATH_BWIDGET_H

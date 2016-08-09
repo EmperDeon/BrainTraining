@@ -26,9 +26,11 @@ set(P_S
 		math/bmathutil.cpp
 		math/bmathwidget.cpp
 
-		widgets/bmainmenu.cpp
 		widgets/bgamebutton.cpp
+		widgets/bleaderboard.cpp
+		widgets/bmainmenu.cpp
 		widgets/bsettingswidgets.cpp
+		widgets/bstatistics.cpp
 		)
 
 set(P_H
@@ -44,9 +46,11 @@ set(P_H
 		math/bmathutil.h
 		math/bmathwidget.h
 
-		widgets/bmainmenu.h
 		widgets/bgamebutton.h
+		widgets/bleaderboard.h
+		widgets/bmainmenu.h
 		widgets/bsettingswidgets.h
+		widgets/bstatistics.h
 		)
 
 qt5_wrap_cpp(GENERATED_SOURCES ${P_H})

@@ -52,17 +52,21 @@
       <sourceFolder url="file://$MODULE_DIR$/widgets/bgamebutton.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/widgets/bsettingswidgets.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/widgets/bgamebutton.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/widgets/bleaderboard.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/widgets/bleaderboard.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/widgets/bmainmenu.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/widgets/bmainmenu.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/widgets/bstatistics.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/widgets/bsettingswidgets.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/widgets/bstatistics.h" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
-          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Release" />
-          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Debug" />
           <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/MinSizeRel" />
+          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Debug" />
+          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Release" />
           <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/RelWithDebInfo" />
           <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/lib/gcc/i686-w64-mingw32/4.9.2/include-fixed" />
           <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/lib/gcc/i686-w64-mingw32/4.9.2/include" />
@@ -71,9 +75,9 @@
           <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/i686-w64-mingw32/include" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Release" />
-          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Debug" />
           <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/MinSizeRel" />
+          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Debug" />
+          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Release" />
           <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/RelWithDebInfo" />
           <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/lib/gcc/i686-w64-mingw32/4.9.2/include-fixed" />
           <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/lib/gcc/i686-w64-mingw32/4.9.2/include" />
@@ -82,12 +86,12 @@
           <root url="file://$APPLICATION_HOME_DIR$/mingw492_32/i686-w64-mingw32/include" />
         </SOURCES>
         <excluded>
-          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Release/BrainTraining_automoc.cpp" />
-          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Release/qrc_res.cpp" />
-          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Debug/BrainTraining_automoc.cpp" />
-          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Debug/qrc_res.cpp" />
           <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/MinSizeRel/BrainTraining_automoc.cpp" />
           <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/MinSizeRel/qrc_res.cpp" />
+          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Debug/BrainTraining_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Debug/qrc_res.cpp" />
+          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Release/BrainTraining_automoc.cpp" />
+          <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/Release/qrc_res.cpp" />
           <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/RelWithDebInfo/BrainTraining_automoc.cpp" />
           <root url="file://$USER_HOME$/.CLion2016.1/system/cmake/generated/BrainTraining-bb4eeb7a/bb4eeb7a/RelWithDebInfo/qrc_res.cpp" />
         </excluded>

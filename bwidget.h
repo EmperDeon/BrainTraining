@@ -18,6 +18,10 @@ public:
 	BGames *getGames(){ return games; }
 
 	void startGame(QString id);
+protected:
+	virtual void keyReleaseEvent(QKeyEvent *event);
+
+
 };
 
 #endif //BRAINTRAINING_BWIDGET_H

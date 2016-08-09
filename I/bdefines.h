@@ -22,8 +22,8 @@ class IGameWidget : public QWidget{
 public:
 	virtual void pause() = 0;
 	virtual void resume() = 0;
-	virtual void focus() = 0;
 
+	virtual void keyPress(int key) = 0;
 };
 
 #include <bio.h>

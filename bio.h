@@ -25,9 +25,9 @@ class BSettings{
 	QJsonObject* obj;
 	QString file = "b_config.json";
 
-	QJsonObject getS(){ return obj->value("Statistics"  ).toObject(); }
-	QJsonObject getL(){ return obj->value("LeaderBoards").toObject(); }
-	QJsonObject getC(){ return obj->value("Categories"  ).toObject(); }
+	QJsonObject getS() { return obj->value("Statistics"  ).toObject(); }
+	QJsonObject getL() { return obj->value("LeaderBoards").toObject(); }
+	QJsonObject getC() { return obj->value("Categories"  ).toObject(); }
 
 	void setS(QJsonObject o) { obj->insert("Statistics"  , o); }
 	void setL(QJsonObject o) { obj->insert("LeaderBoards", o); }
@@ -37,40 +37,38 @@ public:
 	BSettings();
 	void save();
 
-	QJsonValue get(QString k){ return obj->value(k); }
-	QString getS(QString k, QString d = ""){ return obj->value(k).toString(d); }
-	bool has(QString k){ return obj->contains(k); }
-	void set(QString k, QJsonValue v){ this->obj->insert(k, v); }
+	QJsonValue get(QString k) { return obj->value(k); }
+	QString getS(QString k, QString d = "") { return obj->value(k).toString(d); }
+	bool has(QString k) { return obj->contains(k); }
+	void set(QString k, QJsonValue v) { this->obj->insert(k, v); }
+
  QString getGameHash(QString id);
+
 
 	// Settings
 	QWidget* getNewGameSettings(QString id);
- QJsonObject getSettings(QString id) { return get(id).toObject(); }
-	QJsonArray getGenerators(QString id) {	return get("generators").toObject()[id].toArray();	}
+ QJsonObject getSettings(QString id) { return obj->value(id).toObject(); }
+	QJsonArray getGenerators(QString id) {	return obj->value("generators").toObject()[id].toArray();	}
+
 
 	// Statistics
 
 
 	// LeaderBoards
-
 	QJsonArray getLeaderBoard(QString hash);
 	void setLeaderBoard(QString hash, QJsonValue a);
 
+	QList<BLEntry> getLEntry(QString hash);
  void addLEntry(QString id, BLEntry o);
 
 
  // Categories
-	QColor getColor(QString name){ return QColor(QRgb( getC()[name].toObject()["color"].toDouble() )); }
-
+	QColor getColor(QString name) { return QColor(QRgb( getC()[name].toObject()["color"].toDouble() )); }
 };
 
 
-#define B_IO_ADD_OPERATION(a) bool operator a (const BLEntry &s) const{\
-		return score a s.score;\
-	}
-
 class BLEntry{
- QString score, time;
+ QString score, date;
 
 public:
 	BLEntry() { }
@@ -80,14 +78,13 @@ public:
 	static BLEntry fromJson(QJsonObject o);
 	QJsonObject toJson();
 
+	QString getDate() const { return date; }
 	QString getScore() const { return score; }
 
-	B_IO_ADD_OPERATION(<)
-	B_IO_ADD_OPERATION(>)
+	bool operator>(const BLEntry &s) const { return score < s.score; }
+	bool operator<(const BLEntry &s) const { return score > s.score; }
 
-	inline bool operator() (const BLEntry &t1, const BLEntry &t2) const {
-		return (t1 < t2);
-	}
+	bool operator() (const BLEntry &t1, const BLEntry &t2) const { return (t1 > t2); }
 
 };
 

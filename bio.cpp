@@ -135,7 +135,6 @@ QString BSettings::getGameHash(QString id) {
 		}
 	}
 
- qDebug() << o;
 	return BIO::getHash(o);
 }
 
@@ -208,12 +207,9 @@ void BSettings::setLeaderBoard(QString hash, QJsonValue a) {
 }
 
 void BSettings::addLEntry(QString id, BLEntry o) {
- QList<BLEntry> ent;
- QString hash = getGameHash(id);
+	QString hash = getGameHash(id);
+	QList<BLEntry> ent = getLEntry(hash);
 
-	for(QJsonValue v : getLeaderBoard(hash)){
-		ent << BLEntry::fromJson(v.toObject());
-	}
 	ent << o;
 
 	qSort(ent);
@@ -227,25 +223,37 @@ void BSettings::addLEntry(QString id, BLEntry o) {
  setLeaderBoard(hash, a);
 }
 
+QList<BLEntry> BSettings::getLEntry(QString hash) {
+	QList<BLEntry> ent;
+
+	for(QJsonValue v : getLeaderBoard(hash)){
+		ent << BLEntry::fromJson(v.toObject());
+	}
+
+	return ent;
+}
+
 BSettings *B_SETT;
 // BSettings
 
 
 
 BLEntry::BLEntry(QDateTime t, int s) {
- time = t.toString("hh:mm dd-MM-yyyy");
+ date = t.toString("hh:mm   dd-MM-yyyy");
 	score = QString("%1").arg(s, 7, 'f', 0, '0');
 }
 
-BLEntry::BLEntry(QString t, QString s): time(t), score(s) { }
+BLEntry::BLEntry(QString t, QString s): date(t), score(s) { }
 
 BLEntry BLEntry::fromJson(QJsonObject o) {
 	return BLEntry(o["date"].toString(), o["score"].toString());
 }
 
 QJsonObject BLEntry::toJson() {
-	return QJsonObject{{"date", time}, {"score", score}};
+	return QJsonObject{{"date", date}, {"score", score}};
 }
+
+
 
 
 

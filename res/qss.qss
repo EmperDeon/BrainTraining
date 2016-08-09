@@ -11,3 +11,17 @@ QLabel#math_expr {
     color: black;
     font: bold normal 24pt "Fantasque Sans Mono";
 }
+
+QLabel#math_edit {
+    color: black;
+    font: bold normal 18pt "Fantasque Sans Mono";
+}
+
+QLabel[lead_text="true"]{
+    font: normal normal 11pt "Arial";
+}
+
+QPushButton[menu_button="true"] {
+    padding: 10px;
+    font: normal normal 11pt "Arial";
+}

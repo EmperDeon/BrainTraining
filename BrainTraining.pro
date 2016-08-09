@@ -16,8 +16,10 @@ math/bmathmain.cpp\
 math/bmathutil.cpp\
 math/bmathwidget.cpp\
 widgets/bmainmenu.cpp\
+widgets/bleaderboadrds.cpp\
 widgets/bgamebutton.cpp\
-widgets/bsettingswidgets.cpp
+widgets/bsettingswidgets.cpp\
+widgets/bstatistics.cpp
 
 
 HEADERS  += bmain.h\
@@ -31,8 +33,10 @@ math/bmathmain.h\
 math/bmathutil.h\
 math/bmathwidget.h\
 widgets/bmainmenu.h\
+widgets/bleaderboadrds.h\
 widgets/bgamebutton.h\
-widgets/bsettingswidgets.h
+widgets/bsettingswidgets.h\
+widgets/bstatistics.cpp
 
 
 RESOURCES += res.qrc
