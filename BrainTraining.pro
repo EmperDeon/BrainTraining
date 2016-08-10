@@ -16,7 +16,7 @@ math/bmathmain.cpp\
 math/bmathutil.cpp\
 math/bmathwidget.cpp\
 widgets/bmainmenu.cpp\
-widgets/bleaderboadrds.cpp\
+widgets/bleaderboard.cpp\
 widgets/bgamebutton.cpp\
 widgets/bsettingswidgets.cpp\
 widgets/bstatistics.cpp
@@ -33,7 +33,7 @@ math/bmathmain.h\
 math/bmathutil.h\
 math/bmathwidget.h\
 widgets/bmainmenu.h\
-widgets/bleaderboadrds.h\
+widgets/bleaderboard.h\
 widgets/bgamebutton.h\
 widgets/bsettingswidgets.h\
 widgets/bstatistics.cpp

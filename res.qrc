@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>res/qss.qss</file>
-        <file>res/GothamSSm.ttf</file>
-        <file>res/FantasqueSansMono-Regular.ttf</file>
-        <file>res/icon.ico</file>
-        <file>res/img_cat_1.png</file>
-    </qresource>
-</RCC>

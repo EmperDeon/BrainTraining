@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+
+        <file>qss.qss</file>
+        <file>GothamSSm.ttf</file>
+        <file>FantasqueSansMono-Regular.ttf</file>
+
+        <file>icon.ico</file>
+        <file>img_cat_1.png</file>
+
+        <file>default.json</file>
+    </qresource>
+</RCC>
